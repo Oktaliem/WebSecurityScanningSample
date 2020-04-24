@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrangeHRM Test Suite - Author : Okta Liem" >
+    <test name="Full Test (https://github.com/Oktaliem/OrangeHRMTestNGAllure)">
+        <classes>
+            <class name="com.oktaliem.SecurityTest">
+                <methods>
+                    <include name="SpiderWithZAP"/
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

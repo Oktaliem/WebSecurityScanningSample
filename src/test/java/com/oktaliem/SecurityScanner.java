@@ -30,7 +30,6 @@ public class SecurityScanner {
             ApiResponse resp = api.spider.scan(target, null, null, null, null);
             String scanID;
             int progress;
-
             // The scan returns a scan id to support concurrent scanning
             scanID = ((ApiResponseElement) resp).getValue();
             // Poll the status until it completes
