@@ -9,29 +9,62 @@ public class SecurityTest extends SecurityScanner {
     String TARGET = "http://localhost:3000/";
 
     @Test
-    public void SpiderWithZAP() throws IOException, ClientApiException {
+    public void spiderWithZAP() throws IOException, ClientApiException {
         spider(TARGET);
     }
 
     @Test
-    public void SpiderAjaxWithZAP() throws IOException, ClientApiException {
+    public void ajaxSpiderWithZAP() throws IOException, ClientApiException {
         spiderWithAjax(TARGET);
     }
 
     @Test
-    public void PassiveScanWithZAP() throws IOException, ClientApiException {
+    public void passiveScanWithZAP() throws IOException, ClientApiException {
         passiveScan();
     }
 
     @Test
-    public void ActiveScanWithZAP() {
+    public void activeScanWithZAP() {
         activeScan(TARGET);
     }
 
     @Test
-    public void AlertWithZAP() throws IOException, ClientApiException {
+    public void alertWithZAP() throws IOException, ClientApiException {
         alert(TARGET);
     }
 
+    @Test
+    public void passiveScanWithAuthentication() throws IOException, ClientApiException {
+        loginAuthenticationSetUp(TARGET);
+        spider(TARGET);
+        spiderWithAjax(TARGET);
+        passiveScan();
+        alert(TARGET);
+    }
+
+    @Test
+    public void activeScanWithAuthentication() throws IOException, ClientApiException {
+        loginAuthenticationSetUp(TARGET);
+        spider(TARGET);
+        spiderWithAjax(TARGET);
+        activeScan(TARGET);
+        alert(TARGET);
+    }
+
+    @Test
+    public void passiveScanWithoutAuthentication() throws IOException, ClientApiException {
+        spider(TARGET);
+        spiderWithAjax(TARGET);
+        passiveScan();
+        alert(TARGET);
+    }
+
+    @Test
+    public void activeScanWithoutAuthentication() throws IOException, ClientApiException {
+        spider(TARGET);
+        spiderWithAjax(TARGET);
+        activeScan(TARGET);
+        alert(TARGET);
+    }
 
 }
