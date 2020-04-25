@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class SecurityTest extends SecurityScanner {
 
-    String TARGET = "http://localhost:3000/login.php";
+    String TARGET = "http://localhost:3000/";
 
     @Test
     public void SpiderWithZAP() throws IOException, ClientApiException {
