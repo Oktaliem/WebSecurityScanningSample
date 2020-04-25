@@ -39,8 +39,8 @@ $ mvn clean test -Dtest=SecurityTest#passiveScanWithoutAuthentication
 $ mvn clean test -Dtest=SecurityTest#passiveScanWithAuthentication
 ```
 
-## Reference
-https://www.zaproxy.org/getting-started/
-https://www.zaproxy.org/docs/api/?java#documentation-structure
-https://www.zaproxy.org/docs/desktop/start/pentest/
-https://wilsonmar.github.io/owasp-testing/
+## References
+- https://www.zaproxy.org/getting-started/
+- https://www.zaproxy.org/docs/api/?java#documentation-structure
+- https://www.zaproxy.org/docs/desktop/start/pentest/
+
